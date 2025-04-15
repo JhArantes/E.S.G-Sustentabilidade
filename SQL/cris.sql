@@ -1,2 +1,1 @@
-SELECT *
-FROM MC_CLIENTES
+-- teste
