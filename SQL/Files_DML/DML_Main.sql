@@ -1,0 +1,68 @@
+
+-- BUSCANDO INFO
+
+
+-- 01 - Popular Dados 
+
+-- Conhecendo Dados já inseridos
+SELECT * FROM MC_CLIENTE; -- Está Sem Dados
+SELECT * FROM MC_END_CLI; -- Está Sem Dados
+
+SELECT * FROM MC_LOGRADOURO; -- Com Dados
+
+-- Das Tabelas Logradouro -> até -> Tabela Estado   Todas estão com Dados
+
+SELECT * FROM MC_ESTADO;  -- 3 Estados Inseridos
+
+
+
+SELECT 
+    e.SG_ESTADO,
+    e.NM_ESTADO,
+    c.CD_CIDADE,
+    c.NM_CIDADE,
+    b.CD_BAIRRO,
+    b.NM_BAIRRO
+FROM MC_ESTADO e
+LEFT JOIN MC_CIDADE c ON c.SG_ESTADO = e.SG_ESTADO
+LEFT JOIN MC_BAIRRO b ON b.CD_CIDADE = c.CD_CIDADE;
+
+
+-- Adicionando Clientes
+
+-- Pessoa Fisica 
+DECLARE
+  v_id_cliente NUMBER;
+BEGIN
+  INSERT INTO MC_CLIENTE
+    (NR_CLIENTE, NM_CLIENTE, QT_ESTRELAS, VL_MEDIO_COMPRA, ST_CLIENTE, DS_EMAIL, NR_TELEFONE, NM_LOGIN, DS_SENHA)
+  VALUES 
+    (SEQ_CLIENTE_NR.NEXTVAL, 'Fernando Bispo', 6, 342.74, 'I', 'Fernando59@bispo.com', '556499595959', 'FerBispo', '01022000')
+  RETURNING NR_CLIENTE INTO v_id_cliente;
+
+  INSERT INTO MC_CLI_FISICA 
+    (NR_CLIENTE, DT_NASCIMENTO, FL_SEXO_BIOLOGICO, DS_GENERO, NR_CPF) 
+  VALUES 
+    (v_id_cliente, TO_DATE('01/02/2000','DD/MM/YYYY'), 'M', 'Bi-Sexual', '123.456.789-59');
+
+  /*INSERT INTO MC_END_CLI
+    (NR_CLIENTE,CD_LOGRADOURO_CLI,NR_END,DS_COMPLEMENTO_END,DT_INICIO,DT_TERMINO,ST_END)
+  VALUES 
+    (v_id_cliente, )
+*/
+END;
+/
+
+
+SELECT * FROM MC_LOGRADOURO; -- Com Dados
+
+SELECT 
+    c.NR_CLIENTE,
+    c.NM_CLIENTE,
+    f.NR_CLIENTE,
+    f.NR_CPF
+FROM MC_CLIENTE c
+LEFT JOIN MC_CLI_FISICA f ON f.NR_CLIENTE = c.NR_CLIENTE;
+
+
+-- Pessoa Juridica
