@@ -1,0 +1,58 @@
+-- Gerado por Oracle SQL Developer Data Modeler 19.4.0.350.1424
+--   em:        2022-12-12 17:17:42 BRST
+--   site:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+DROP TABLE mc_bairro CASCADE CONSTRAINTS;
+
+DROP TABLE mc_categoria_prod CASCADE CONSTRAINTS;
+
+DROP TABLE mc_cidade CASCADE CONSTRAINTS;
+
+DROP TABLE mc_cli_fisica CASCADE CONSTRAINTS;
+
+DROP TABLE mc_cli_juridica CASCADE CONSTRAINTS;
+
+DROP TABLE mc_cliente CASCADE CONSTRAINTS;
+
+DROP TABLE mc_depto CASCADE CONSTRAINTS;
+
+DROP TABLE mc_end_cli CASCADE CONSTRAINTS;
+
+DROP TABLE mc_end_func CASCADE CONSTRAINTS;
+
+DROP TABLE mc_estado CASCADE CONSTRAINTS;
+
+DROP TABLE mc_funcionario CASCADE CONSTRAINTS;
+
+DROP TABLE mc_logradouro CASCADE CONSTRAINTS;
+
+DROP TABLE mc_produto CASCADE CONSTRAINTS;
+
+DROP TABLE mc_sgv_produto_video CASCADE CONSTRAINTS;
+
+DROP TABLE mc_sgv_sac CASCADE CONSTRAINTS;
+
+DROP TABLE mc_sgv_visualizacao_video CASCADE CONSTRAINTS;
+
+-- Limpa os DDLs executados e que se encontram no recyclebin
+purge recyclebin;
+
+/*
+--
+-- Elimina as sequences criadas para DML no projeto Melhores Compras (MC)
+--
+DROP SEQUENCE SQ_MC_DEPTO;
+DROP SEQUENCE SQ_MC_FUNCIONARIO;
+DROP SEQUENCE SQ_MC_CIDADE;
+DROP SEQUENCE SQ_MC_BAIRRO;
+DROP SEQUENCE SQ_MC_LOGRADOURO;
+DROP SEQUENCE SQ_MC_CLIENTE;
+DROP SEQUENCE SQ_MC_CATEGORIA;
+DROP SEQUENCE SQ_MC_PRODUTO;
+DROP SEQUENCE SQ_MC_SGV_VISUAL_PROD;
+DROP SEQUENCE SQ_MC_SGV_SAC;
+*/
+
