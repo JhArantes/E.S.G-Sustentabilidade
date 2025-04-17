@@ -37,6 +37,9 @@ DROP TABLE mc_sgv_sac CASCADE CONSTRAINTS;
 
 DROP TABLE mc_sgv_visualizacao_video CASCADE CONSTRAINTS;
 
+-- Excluindo a Sequence NR_CLIENTE criada pela Squad
+DROP SEQUENCE SEQ_CLIENTE_NR
+
 -- Limpa os DDLs executados e que se encontram no recyclebin
 purge recyclebin;
 
