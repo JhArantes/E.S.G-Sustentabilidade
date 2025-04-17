@@ -1,0 +1,32 @@
+[
+    {
+        "descricao": "TV 4k 120fps",
+        "valor": 1599.9,
+        "embalagem": "caixa de papelão",
+        "icms": 287.982
+    },
+    {
+        "descricao": "PS5",
+        "valor": 4599.9,
+        "embalagem": "caixa de papelão",
+        "icms": 827.9819999999999
+    },
+    {
+        "descricao": "Samsung S25",
+        "valor": 6000.0,
+        "embalagem": "caixa pequena",
+        "icms": 1080.0
+    },
+    {
+        "descricao": "fone bluetooth original samsung",
+        "valor": 350.0,
+        "embalagem": "caixa pequena",
+        "icms": 63.0
+    },
+    {
+        "descricao": "carregador por indução",
+        "valor": 450.0,
+        "embalagem": "sacola",
+        "icms": 81.0
+    }
+]
